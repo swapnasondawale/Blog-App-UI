@@ -31,7 +31,6 @@ function HomeComponent(props) {
      * @param {Number} id used for get id of post
      */
     const handleClick = (id) => {
-        console.log('postDetails', id);
         axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
         .then((response)=>{
             if(response.status===200){

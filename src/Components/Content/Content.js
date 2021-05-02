@@ -66,7 +66,6 @@ function Content(props) {
                 <Card >
                     <Card.Body>
                         <Card.Title>Comments</Card.Title>
-
                         {comment.map((item) => (
                             <Row key={item.id}>
                                 <Col sm={12}>
@@ -77,7 +76,6 @@ function Content(props) {
                             </Row>
                         ))
                         }
-
                     </Card.Body>
                 </Card>
                 <Card>
@@ -90,7 +88,6 @@ function Content(props) {
                 </Card>
             </Container>
         </>
-
     )
 }
 export default withRouter(Content);
