@@ -7,6 +7,10 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+/**
+ * This component is Root Component
+ * @returns All components which we route
+ */
 function App() {
   return (
     <div className="App">

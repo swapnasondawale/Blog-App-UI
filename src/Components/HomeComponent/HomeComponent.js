@@ -4,10 +4,16 @@ import axios from 'axios';
 import HomeCard from '../Common/HomeCard/HomeCard';
 import { withRouter } from 'react-router';
 import { Col, Container, Row } from 'react-bootstrap';
-
-
+/**
+ * This component is Home Page Component
+ * @param {*} props 
+ * @returns List of Posts
+ */
 function HomeComponent(props) {
     const [data, setData] = useState([]);
+    /**
+     * This is used for fetch posts API
+     */
     useEffect(() => {
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then((response) => {
@@ -21,6 +27,10 @@ function HomeComponent(props) {
                 console.log(err);
             });
     }, [])
+    /**
+     * This function used for fetch the data of clicked post from API and set to localStorage and redirect to Content Page
+     * @param {Number} id used for get id of post
+     */
     const handleClick = (id) => {
         console.log('postDetails', id);
         axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -32,8 +42,7 @@ function HomeComponent(props) {
         })
         .catch((err) => {
             console.log(err);
-        });
-        
+        });        
     }
     return (
         <div>
