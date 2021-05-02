@@ -18,7 +18,6 @@ function Content(props) {
         axios.get(`https://jsonplaceholder.typicode.com/posts/${data.id}/comments`)
             .then((response) => {
                 if (response.status === 200) {
-                    console.log("comment", response);
                     setComment(response.data)
                 }
             })

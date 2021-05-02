@@ -18,7 +18,6 @@ function HomeComponent(props) {
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then((response) => {
                 if (response.status === 200) {
-                    console.log('Posts', response);
                     setData(response.data)
                 }
 
